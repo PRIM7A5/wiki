@@ -1,0 +1,18 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+Encyclopedia
+{% endblock %}
+
+{% block body %}
+<h1>Search Pages</h1>
+<ul>
+    {% for title in entries %}
+    <li><a href="/{{ title }}">{{ title }}</a></li>
+    {% empty %}
+    <li>No Pages.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+<!-- <a href="{% url 'index' %}">Home</a> -->
